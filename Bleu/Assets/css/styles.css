@@ -1,28 +1,4 @@
-﻿@font-face {
-  font-family: "TinBird";
-  src: url("../font/TinBird.ttf") format("truetype");
-  }
-@font-face {
-  font-family: "TinBird-Italic";
-  src: url("../font/TinBirdIt.ttf") format("truetype");
-  }
-
-@font-face {
-  font-family: "Atype";
-  src: url("../font/AtypeNormal.ttf") format("truetype");
-  }
-
-@font-face {
-  font-family: "Atype-Light";
-  src: url("../font/AtypeLight.ttf") format("truetype");
-  }
-
-@font-face {
-  font-family: "SpringSteel";
-  src: url("../font/springsteel-lig.otf") format("opentype");
-  }
-  
-body 
+﻿body 
 {
     font-family: SpringSteel;
     font-size: 40px;
