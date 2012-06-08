@@ -97,12 +97,12 @@
   <ItemGroup>
     <Content Include="Views\Root\About.cshtml" />
     <Content Include="Views\Article\ArticleNotFound.cshtml" />
-    <None Include="Assets\font\AtypeLight.ttf" />
-    <None Include="Assets\font\AtypeNormal.ttf" />
-    <None Include="Assets\font\springsteel-lig.otf" />
-    <None Include="Assets\font\TinBird.ttf" />
-    <None Include="Assets\font\TinBirdIt.ttf" />
-    <None Include="Views\Article\ArticleViewTemplate.cshtml" />
+    <Content Include="Assets\font\AtypeLight.ttf" />
+    <Content Include="Assets\font\AtypeNormal.ttf" />
+    <Content Include="Assets\font\springsteel-lig.otf" />
+    <Content Include="Assets\font\TinBird.ttf" />
+    <Content Include="Assets\font\TinBirdIt.ttf" />
+    <Content Include="Views\Article\ArticleViewTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bleu.FileSystem\Bleu.FileSystem.csproj">
