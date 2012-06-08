@@ -40,6 +40,7 @@ namespace Bleu.Mvc
                             return new ViewEngineResult(view, this);
                         }
 
+
                         var diskPath = HttpContext.Current.Server.MapPath(path);
 
                         var articleTemplate = string.Format("{0}/{1}", Settings.ArticleViewsPath, "ArticleViewTemplate.cshtml");
