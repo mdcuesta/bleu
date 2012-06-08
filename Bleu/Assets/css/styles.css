@@ -1,17 +1,29 @@
 ﻿body 
 {
     font-family: SpringSteel;
-    font-size: 40px;
+    font-size: 18pt;
+    background: #FCFBE7;
 }
 p 
-{
+{    
     font-family: SpringSteel;
-    font-size: 16px;
     line-height: 30px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
+.heading
+{
+    font-family: SpringSteel;
+    font-size: 40px;
+    font-weight: bold;
+}
 
-
+#footer
+{
+    height: 350px;
+    background: #262323;
+}
 
 
 /* ============================= */
