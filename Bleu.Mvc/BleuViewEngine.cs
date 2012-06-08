@@ -45,7 +45,7 @@ namespace Bleu.Mvc
                         var articleTemplate = string.Format("{0}/{1}", Settings.ArticleViewsPath, "ArticleViewTemplate.cshtml");
 
                         if(!FileExists(controllerContext, articleTemplate))
-                            throw new FileNotFoundException("Unable to locate ArticleView.template");
+                            throw new FileNotFoundException("Unable to locate ArticleViewTemplate.cshtml");
 
                         var templateDiskPath = HttpContext.Current.Server.MapPath(articleTemplate);
                         var templateText = File.ReadAllText(templateDiskPath);
