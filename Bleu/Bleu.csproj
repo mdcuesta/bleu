@@ -70,6 +70,7 @@
     <Content Include="Assets\css\bootstrap-responsive.min.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\css\layout.css" />
+    <Content Include="Assets\css\styles.css" />
     <Content Include="Assets\css\text.css" />
     <Content Include="Assets\js\bootstrap-dropdown.js" />
     <Content Include="Assets\js\bootstrap.js" />
@@ -94,9 +95,13 @@
     <Content Include="Views\Root\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\font\criticized.ttf" />
     <Content Include="Views\Root\About.cshtml" />
     <Content Include="Views\Article\ArticleNotFound.cshtml" />
+    <None Include="Assets\font\AtypeLight.ttf" />
+    <None Include="Assets\font\AtypeNormal.ttf" />
+    <None Include="Assets\font\springsteel-lig.otf" />
+    <None Include="Assets\font\TinBird.ttf" />
+    <None Include="Assets\font\TinBirdIt.ttf" />
     <None Include="Views\Article\ArticleViewTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
