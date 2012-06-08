@@ -97,11 +97,11 @@
   <ItemGroup>
     <Content Include="Views\Root\About.cshtml" />
     <Content Include="Views\Article\ArticleNotFound.cshtml" />
-    <Content Include="Assets\font\AtypeLight.ttf" />
-    <Content Include="Assets\font\AtypeNormal.ttf" />
-    <Content Include="Assets\font\springsteel-lig.otf" />
-    <Content Include="Assets\font\TinBird.ttf" />
-    <Content Include="Assets\font\TinBirdIt.ttf" />
+    <Content Include="Assets\css\font\AtypeLight.ttf" />
+    <Content Include="Assets\css\font\AtypeNormal.ttf" />
+    <Content Include="Assets\css\font\springsteel-lig.otf" />
+    <Content Include="Assets\css\font\TinBird.ttf" />
+    <Content Include="Assets\css\font\TinBirdIt.ttf" />
     <Content Include="Views\Article\ArticleViewTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
