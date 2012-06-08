@@ -1,0 +1,56 @@
+﻿/* Text Align */
+.justify
+{
+    text-align: justify;
+}
+.align-center
+{
+    text-align: center;
+}
+.align-right
+{
+    text-align: right;
+}
+.align-left
+{
+    text-align: left;
+}
+/* End */
+
+/* Text Decoration */
+.underline
+{
+    text-decoration: underline;
+}
+.overline
+{
+    text-decoration: overline;
+}
+.line-through
+{
+    text-decoration: line-through;    
+}
+.blink
+{
+    text-decoration: blink;
+}
+/* End */
+
+/* Font Weight */
+.bold
+{
+    font-weight: bold;
+}
+.bolder
+{
+    font-weight: bolder;
+}
+.lighter
+{
+    font-weight: lighter;
+}
+.normal
+{
+    font-weight: normal;
+}
+/* End */

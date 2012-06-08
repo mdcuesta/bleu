@@ -1,0 +1,585 @@
+﻿
+/* Float */
+.fleft
+{
+    float: left;
+}
+.fright
+{
+    float: right;    
+}
+/* End */
+
+/* Clear */
+.cleft
+{
+    clear: left;
+}
+.cright
+{
+    clear: right;
+}
+.cboth
+{
+    clear: both;
+}
+/* End */
+
+/* Position */
+.absolute
+{
+    position: absolute;
+}
+.relative
+{
+    position: relative;
+}
+.static
+{
+    position: static;
+}
+.fixed
+{
+    position: fixed;
+}
+/* End */
+
+/* Padding */
+.padding-10
+{
+    padding: 10px;
+}
+.padding-20
+{
+    padding: 20px;
+}
+.padding-30
+{
+    padding: 30px;    
+}
+.padding-40
+{
+    padding: 40px;    
+}
+.padding-50
+{
+    padding: 50px;    
+}
+.padding-60
+{
+    padding: 60px;    
+}
+.padding-70
+{
+    padding: 70px;    
+}
+.padding-80
+{
+    padding: 80px;    
+}
+.padding-90
+{
+    padding: 90px;    
+}
+.padding-100
+{
+    padding: 100px;    
+}
+/* End */
+
+/* Padding Top */
+.padding-top-10
+{
+    padding-top: 10px;
+}
+.padding-top-20
+{
+    padding-top: 20px;
+}
+.padding-top-30
+{
+    padding-top: 30px;    
+}
+.padding-top-40
+{
+    padding-top: 40px;    
+}
+.padding-top-50
+{
+    padding-top: 50px;    
+}
+.padding-top-60
+{
+    padding-top: 60px;    
+}
+.padding-top-70
+{
+    padding-top: 70px;    
+}
+.padding-top-80
+{
+    padding-top: 80px;    
+}
+.padding-top-90
+{
+    padding-top: 90px;    
+}
+.padding-top-100
+{
+    padding-top: 100px;    
+}
+/* End */
+
+/* Padding Right */
+.padding-right-10
+{
+    padding-right: 10px;
+}
+.padding-right-20
+{
+    padding-right: 20px;
+}
+.padding-right-30
+{
+    padding-right: 30px;    
+}
+.padding-right-40
+{
+    padding-right: 40px;    
+}
+.padding-right-50
+{
+    padding-right: 50px;    
+}
+.padding-right-60
+{
+    padding-right: 60px;    
+}
+.padding-right-70
+{
+    padding-right: 70px;    
+}
+.padding-right-80
+{
+    padding-right: 80px;    
+}
+.padding-right-90
+{
+    padding-right: 90px;    
+}
+.padding-right-100
+{
+    padding-right: 100px;    
+}
+/* End */
+
+/* Padding Bottom */
+.padding-bottom-10
+{
+    padding-bottom: 10px;
+}
+.padding-bottom-20
+{
+    padding-bottom: 20px;
+}
+.padding-bottom-30
+{
+    padding-bottom: 30px;    
+}
+.padding-bottom-40
+{
+    padding-bottom: 40px;    
+}
+.padding-bottom-50
+{
+    padding-bottom: 50px;    
+}
+.padding-bottom-60
+{
+    padding-bottom: 60px;    
+}
+.padding-bottom-70
+{
+    padding-bottom: 70px;    
+}
+.padding-bottom-80
+{
+    padding-bottom: 80px;    
+}
+.padding-bottom-90
+{
+    padding-bottom: 90px;    
+}
+.padding-bottom-100
+{
+    padding-bottom: 100px;    
+}
+/* End */
+
+/* Padding Left */
+.padding-left-10
+{
+    padding-left: 10px;
+}
+.padding-left-20
+{
+    padding-left: 20px;
+}
+.padding-left-30
+{
+    padding-left: 30px;    
+}
+.padding-left-40
+{
+    padding-left: 40px;    
+}
+.padding-left-50
+{
+    padding-left: 50px;    
+}
+.padding-left-60
+{
+    padding-left: 60px;    
+}
+.padding-left-70
+{
+    padding-left: 70px;    
+}
+.padding-left-80
+{
+    padding-left: 80px;    
+}
+.padding-left-90
+{
+    padding-left: 90px;    
+}
+.padding-left-100
+{
+    padding-left: 100px;    
+}
+/* End */
+
+/* Margin */
+.margin-10
+{
+    margin: 10px;
+}
+.margin-20
+{
+    margin: 20px;
+}
+.margin-30
+{
+    margin: 30px;
+}
+.margin-40
+{
+    margin: 40px;
+}
+.margin-40
+{
+    margin: 40px;
+}
+.margin-50
+{
+    margin: 50px;
+}
+.margin-60
+{
+    margin: 60px;
+}
+.margin-70
+{
+    margin: 70px;
+}
+.margin-80
+{
+    margin: 80px;
+}
+.margin-90
+{
+    margin: 90px;
+}
+.margin-100
+{
+    margin: 100px;
+}
+/* End */
+
+/* Margin Top */
+.margin-top-10
+{
+    margin-top: 10px;
+}
+.margin-top-20
+{
+    margin-top: 20px;
+}
+.margin-top-30
+{
+    margin-top: 30px;
+}
+.margin-top-40
+{
+    margin-top: 40px;
+}
+.margin-top-40
+{
+    margin-top: 40px;
+}
+.margin-top-50
+{
+    margin-top: 50px;
+}
+.margin-top-60
+{
+    margin-top: 60px;
+}
+.margin-top-70
+{
+    margin-top: 70px;
+}
+.margin-top-80
+{
+    margin-top: 80px;
+}
+.margin-top-90
+{
+    margin-top: 90px;
+}
+.margin-top-100
+{
+    margin-top: 100px;
+}
+/* End */
+
+/* Margin Bottom */
+.margin-bottom-10
+{
+    margin-bottom: 10px;
+}
+.margin-bottom-20
+{
+    margin-bottom: 20px;
+}
+.margin-bottom-30
+{
+    margin-bottom: 30px;
+}
+.margin-bottom-40
+{
+    margin-bottom: 40px;
+}
+.margin-bottom-40
+{
+    margin-bottom: 40px;
+}
+.margin-bottom-50
+{
+    margin-bottom: 50px;
+}
+.margin-bottom-60
+{
+    margin-bottom: 60px;
+}
+.margin-bottom-70
+{
+    margin-bottom: 70px;
+}
+.margin-bottom-80
+{
+    margin-bottom: 80px;
+}
+.margin-bottom-90
+{
+    margin-bottom: 90px;
+}
+.margin-bottom-100
+{
+    margin-bottom: 100px;
+}
+/* End */
+
+/* Margin Right */
+.margin-right-10
+{
+    margin-right: 10px;
+}
+.margin-right-20
+{
+    margin-right: 20px;
+}
+.margin-right-30
+{
+    margin-right: 30px;
+}
+.margin-right-40
+{
+    margin-right: 40px;
+}
+.margin-right-40
+{
+    margin-right: 40px;
+}
+.margin-right-50
+{
+    margin-right: 50px;
+}
+.margin-right-60
+{
+    margin-right: 60px;
+}
+.margin-right-70
+{
+    margin-right: 70px;
+}
+.margin-right-80
+{
+    margin-right: 80px;
+}
+.margin-right-90
+{
+    margin-right: 90px;
+}
+.margin-right-100
+{
+    margin-right: 100px;
+}
+/* End */
+
+/* Margin Left */
+.margin-left-10
+{
+    margin-left: 10px;
+}
+.margin-left-20
+{
+    margin-left: 20px;
+}
+.margin-left-30
+{
+    margin-left: 30px;
+}
+.margin-left-40
+{
+    margin-left: 40px;
+}
+.margin-left-40
+{
+    margin-left: 40px;
+}
+.margin-left-50
+{
+    margin-left: 50px;
+}
+.margin-left-60
+{
+    margin-left: 60px;
+}
+.margin-left-70
+{
+    margin-left: 70px;
+}
+.margin-left-80
+{
+    margin-left: 80px;
+}
+.margin-left-90
+{
+    margin-left: 90px;
+}
+.margin-left-100
+{
+    margin-left: 100px;
+}
+/* End */
+
+/* Height */
+.height-50
+{
+    height: 50px;
+}
+.height-100
+{
+    height: 100px;    
+}
+.height-200
+{
+    height: 200px;    
+}
+.height-300
+{
+    height: 300px;    
+}
+.height-400
+{
+    height: 400px;    
+}
+.height-500
+{
+    height: 500px;    
+}
+.height-600
+{
+    height: 600px;    
+}
+.height-700
+{
+    height: 700px;    
+}
+.height-800
+{
+    height: 800px;    
+}
+.height-900
+{
+    height: 900px;    
+}
+.height-1000
+{
+    height: 1000px;    
+}
+/* End */
+
+/* Width */
+.width-100
+{
+    width: 100px;    
+}
+.width-200
+{
+    width: 200px;    
+}
+.width-300
+{
+    width: 300px;    
+}
+.width-400
+{
+    width: 400px;    
+}
+.width-500
+{
+    width: 500px;    
+}
+.width-600
+{
+    width: 600px;    
+}
+.width-700
+{
+    width: 700px;    
+}
+.width-800
+{
+    width: 800px;    
+}
+.width-900
+{
+    width: 900px;    
+}
+.width-1000
+{
+    width: 1000px;    
+}
+/* End */
