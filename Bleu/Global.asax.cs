@@ -24,28 +24,42 @@ namespace Bleu
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "About",
+                "about",
+                new { controller = "Root", action = "About" }
+                );
+
+            routes.MapRoute(
+                "404",
+                "Error404",
+                new { controller = "Root", action = "PageNotFound" }
+                );
+
+            routes.MapRoute(
                 "Root",
                 "",
-                new { controller = "Root", action = "Index" }
+                new { controller = "Root", action = "Index", page = "1" }
                 );
 
             routes.MapRoute(
                 "Index",
                 "index",
-                new { controller = "Root", action = "Index" }
+                new { controller = "Root", action = "Index", page = "1" }
                 );
 
             routes.MapRoute(
                 "Home",
                 "home",
-                new { controller = "Root", action = "Index" }
+                new { controller = "Root", action = "Index", page = "1" }
                 );
 
             routes.MapRoute(
-                "About",
-                "about",
-                new { controller = "Root", action = "About" }
+                "IndexPaged",
+                "{page}",
+                new { controller = "Root", action = "Index"}
                 );
+
+            
 
             routes.MapRoute(
                 "Article",

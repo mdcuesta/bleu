@@ -32,7 +32,13 @@ namespace Bleu.Mvc
 
         public static string Author { get { return Configuration.Author; } }
 
+        public static string BlogTitle { get { return Configuration.BlogTitle; } }
+
+        public static string BlogDescription { get { return Configuration.Description; } }
+
         public static string ArticlesPath { get { return Configuration.ArticlesPath; } }
+
+        public static int BlogsPageSize { get { return Configuration.BlogsPageSize; } }
 
         public static string ArticleViewsPath { 
             get 
@@ -52,5 +58,6 @@ namespace Bleu.Mvc
                         : Configuration.ArticleNotFoundView; 
             }
         }
+
     }
 }

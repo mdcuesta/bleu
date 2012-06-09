@@ -5,7 +5,13 @@ namespace Bleu.Mvc
 {
     public interface IContentSource
     {
-        string GetContent(int year, int month, int day, string title);
+        IBlog GetBlog(int year, int month, int day, string title);
+
+        int Count();
+
+        IEnumerable<IBlog> GetPagedBlogs(int page, int pageSize);
+
+        IEnumerable<IBlog> GetPagedBlogs(int page, int pageSize, bool oldestFirst);
 
         IEnumerable<IBlog> GetBlogs(int year);
 

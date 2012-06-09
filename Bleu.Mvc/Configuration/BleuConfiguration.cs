@@ -32,6 +32,33 @@ namespace Bleu.Mvc.Configuration
             set { this["articlenotfoundview"] = value; }
         }
 
+        [ConfigurationProperty("blogtitle")]
+        public string BlogTitle
+        {
+            get { return (string)this["blogtitle"] ?? string.Empty; }
+            set { this["blogtitle"] = value; }
+        }
+
+        [ConfigurationProperty("description")]
+        public string Description
+        {
+            get { return (string)this["description"] ?? string.Empty; }
+            set { this["description"] = value; }
+        }
+
+        [ConfigurationProperty("blogspagesize")]
+        public int BlogsPageSize
+        {
+            get 
+            {
+                int val = 10;
+                var configValue = (this["blogspagesize"] ?? "10").ToString();
+                int.TryParse(configValue, out val);                
+                return val;
+            }
+            set { this["blogspagesize"] = value; }
+        }
+
         internal static BleuConfiguration Default
         {
             get 

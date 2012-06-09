@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Web;
 using System.Web.Mvc;
+using Bleu.Mvc.Schema;
 
 namespace Bleu.Mvc
 {
@@ -32,14 +33,13 @@ namespace Bleu.Mvc
                                 : string.Format("{0}-{1}", title, segments[i]);
                         }
 
-                        var content = ContentManager.ContentSource.GetContent(year, month, day, title);
+                        var blog = ContentManager.ContentSource.GetBlog(year, month, day, title);
 
-                        if(string.IsNullOrEmpty(content))
-                        {
-                            var view = CreateView(controllerContext, Settings.ArticleNotFoundView, "");
+                        if (blog == default(IBlog))
+                        {                            
+                            var view = CreateView(controllerContext, Settings.ArticleNotFoundView, "");                           
                             return new ViewEngineResult(view, this);
-                        }
-
+                        }                        
 
                         var diskPath = HttpContext.Current.Server.MapPath(path);
 
@@ -50,7 +50,9 @@ namespace Bleu.Mvc
 
                         var templateDiskPath = HttpContext.Current.Server.MapPath(articleTemplate);
                         var templateText = File.ReadAllText(templateDiskPath);
-                        content = templateText.Replace("<!--Content-->", content);
+                        templateText = templateText.Replace("<!--Title-->", blog.Title ?? string.Empty);
+                        templateText = templateText.Replace("<!--Date-->", blog.Date.ToLongDateString());
+                        var content = templateText.Replace("<!--Content-->", blog.Content ?? string.Empty);
 
                         File.WriteAllText(diskPath, content);
                     }

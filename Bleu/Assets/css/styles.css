@@ -2,7 +2,7 @@
 {
     font-family: SpringSteel;
     font-size: 18pt;
-    background: #FCFBE7;
+    background: #FFFBF5;
 }
 p 
 {    
@@ -10,20 +10,111 @@ p
     line-height: 30px;
     font-weight: bold;
     font-size: 18px;
+    color: #2A2111;
 }
 
-.heading
+.heading,.heading a
 {
     font-family: SpringSteel;
     font-size: 40px;
     font-weight: bold;
+    color: #956C1F;
+    text-shadow: 1px 1px 1px #AAAAAA;
+    text-decoration: none;
 }
-
+.date-heading
+{
+    font-family: SpringSteel;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 60px;
+    color: #A3906D;
+}
+.blog-title
+{
+    font-family: SpringSteel;
+    font-size: 80px;
+    font-weight: bold;
+    color: #956C1F;
+    text-shadow: 1px 1px 1px #AAAAAA;
+}
+.blog-title a
+{
+    font-family: SpringSteel;
+    font-size: 80px;
+    font-weight: bold;
+    color: #956C1F;
+    text-decoration: none;
+}
+.blog-description
+{
+    font-family: SpringSteel;
+    font-size: 40px;
+    font-weight: bold;
+    color: #A3906D;
+    line-height: 40px;
+}
+.read-more
+{
+    font-family: SpringSteel;
+    font-size: 25px;
+    font-weight: bold;
+    color: #A3906D;
+}
 #footer
 {
     height: 350px;
-    background: #262323;
+    background: #180F01;
 }
+
+.nav-pills > li > a
+{
+    font-weight: bold;
+}
+
+
+/* btn-bleu */
+.btn-bleu
+{
+    color: #ffffff;
+    text-shadow: none;
+    background: #956C1F;   
+}
+.btn-bleu:hover 
+{
+    color: #ffffff;
+    text-shadow: none;
+    background: #956C1F;
+}
+.btn-group.open .btn-bleu
+{
+    background: #956C1F;
+}
+.btn-group.open .btn.btn-bleu
+{
+    background: #956C1F;
+}
+.btn-bleu .caret
+{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #ffffff;
+    content: "";
+    display: inline-block;
+    height: 0;
+    opacity: 0.3;
+    vertical-align: top;
+    width: 0;
+}
+
+.btn-large {
+    border-radius: 5px 5px 5px 5px;
+    font-size: 20px;
+    line-height: normal;
+    padding: 9px 14px;
+}
+
+/* End */
 
 
 /* ============================= */
