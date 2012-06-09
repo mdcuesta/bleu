@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Bleu.Mvc;
+using Bleu.Helpers;
 
 namespace Bleu.Controllers
 {
@@ -24,9 +25,11 @@ namespace Bleu.Controllers
             if (page * pageSize < articleCount)
                 showOlderPosts = true;
 
+            var models = ContentManager.ContentSource.GetPagedBlogs(page, pageSize);
+
             ViewData.Add("showolderposts", showOlderPosts);
             ViewData.Add("shownewerposts", !(page == 1));
-            return View();
+            return View("Index", models);
         }        
 
         public ActionResult About()

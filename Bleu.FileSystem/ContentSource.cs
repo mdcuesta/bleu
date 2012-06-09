@@ -63,17 +63,50 @@ namespace Bleu.FileSystem
 
         public IEnumerable<IBlog> GetBlogs(int year)
         {
-            return default(IEnumerable<IBlog>);
+            var absolutePath = HttpContext.Current.Server.MapPath(Settings.ArticlesPath);
+            if (!Directory.Exists(absolutePath))
+                throw new DirectoryNotFoundException("Articles Path");
+
+            var info = new DirectoryInfo(absolutePath);
+
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(year.ToString()));
+
+            foreach (var file in files)
+            {
+                yield return new Blog(file.FullName);
+            }
         }
 
         public IEnumerable<IBlog> GetBlogs(int year, int month)
         {
-            return default(IEnumerable<IBlog>);
+            var absolutePath = HttpContext.Current.Server.MapPath(Settings.ArticlesPath);
+            if (!Directory.Exists(absolutePath))
+                throw new DirectoryNotFoundException("Articles Path");
+
+            var info = new DirectoryInfo(absolutePath);
+
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}", year, month)));
+
+            foreach (var file in files)
+            {
+                yield return new Blog(file.FullName);
+            }
         }
 
         public IEnumerable<IBlog> GetBlogs(int year, int month, int day)
         {
-            return default(IEnumerable<IBlog>);
+            var absolutePath = HttpContext.Current.Server.MapPath(Settings.ArticlesPath);
+            if (!Directory.Exists(absolutePath))
+                throw new DirectoryNotFoundException("Articles Path");
+
+            var info = new DirectoryInfo(absolutePath);
+
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}-{2:d2}", year, month, day)));
+
+            foreach (var file in files)
+            {
+                yield return new Blog(file.FullName);
+            }
         }
     }
 }

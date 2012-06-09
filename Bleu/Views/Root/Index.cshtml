@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Bleu.Mvc.Schema.IBlog>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -6,11 +7,11 @@
     @Html.Title() - @Html.Description()
 }
 
-@foreach (var blog in @BleuHelper.PagedBlogs((int)ViewData["page"], Bleu.Mvc.Settings.BlogsPageSize, false))
+@foreach (var blog in @Model)
 {
     
     <div class="row-fluid">  
-        <div class="span10">
+        <div class="span12">
             <span class="date-heading">
                 @blog.Date.ToLongDateString()    
             </span>
@@ -18,7 +19,7 @@
     </div>
 
     <div class="row-fluid">
-        <div class="span10">
+        <div class="span12">
             <span class="heading">
                 @Html.ActionLink(@blog.Title, "Show", "Article", 
                     new { year = @blog.Date.Year,
@@ -30,7 +31,7 @@
     </div>
 
     <div class="row-fluid margin-top-40 margin-bottom-80">
-        <div class="span10">
+        <div class="span12">
             <p class="justify">
                 @blog.PreviewContent                 
                
@@ -47,7 +48,7 @@
 }
 
 <div class="row-fluid">
-    <div class="span10">      
+    <div class="span12">      
         <div class="pull-left">
             @if ((bool)@ViewData["shownewerposts"])
             { 

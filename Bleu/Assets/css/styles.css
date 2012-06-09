@@ -69,6 +69,10 @@ p
     text-decoration: none;
     font-style: italic;
 }
+#content-body
+{
+    min-height: 500px;
+}
 #footer
 {
     height: 100px;
@@ -80,7 +84,17 @@ p
     font-weight: bold;
 }
 
+.menu
+{
+    font-size: 30px;
+}
 
+.highlight, p .highlight
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #0088CC;
+}
 /* btn-bleu */
 .btn-bleu
 {
@@ -122,6 +136,12 @@ p
     padding: 9px 14px;
 }
 
+ul.instruction li
+{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
 /* End */
 
 
