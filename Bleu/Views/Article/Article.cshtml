@@ -35,7 +35,7 @@
     <div class="span10">      
         @if (@Model.PreviousBlog != null)
         {
-            <div class="pull-left">
+            <div class="pull-right">
                 @Html.ActionLink("<< " + @Model.PreviousBlog.Title, "Show", "Article",
                      new
                      {
@@ -48,7 +48,7 @@
         }
         @if (@Model.NextBlog != null)
         {
-            <div class="pull-right">
+            <div class="pull-left">
                 @Html.ActionLink(@Model.NextBlog.Title + " >>", "Show", "Article",
                      new
                      {
