@@ -34,13 +34,16 @@
             <p class="justify">
                 @blog.PreviewContent  
                 
-                <span class="read-more">
-                    @Html.ActionLink("...read more...", "Show", "Article", 
-                        new { year = @blog.Date.Year,
-                            month = @blog.Date.Month,
-                            day = @blog.Date.Day,
-                            title = @blog.UniqueTitle }, null)  
-                </span>
+                @if(@blog.PreviewTruncated)
+                {
+                    <span class="read-more">
+                        @Html.ActionLink("...read more...", "Show", "Article", 
+                            new { year = @blog.Date.Year,
+                                month = @blog.Date.Month,
+                                day = @blog.Date.Day,
+                                title = @blog.UniqueTitle }, null)  
+                    </span>
+                }
             </p>
         </div>    
     </div>

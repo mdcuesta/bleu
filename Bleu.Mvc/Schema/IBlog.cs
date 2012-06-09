@@ -19,5 +19,7 @@ namespace Bleu.Mvc.Schema
         string Content { get; }
 
         string PreviewContent { get; }
+
+        bool PreviewTruncated { get; }
     }
 }

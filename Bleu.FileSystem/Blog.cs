@@ -1,5 +1,6 @@
 ﻿using System;
 using Bleu.Mvc.Schema;
+using Bleu.Mvc;
 using System.Web;
 using System.Linq;
 using System.IO;
@@ -7,7 +8,12 @@ using System.IO;
 namespace Bleu.FileSystem
 {
     class Blog : IBlog  
-    {        
+    {
+        private string _previewContent;
+        private string _content;
+        private IBlog _previousBlog;
+        private IBlog _nextBlog;
+
         private string AbsolutePath { get; set; }        
 
         public Blog(string path)
@@ -36,15 +42,18 @@ namespace Bleu.FileSystem
         {
             get
             {
-                var directory = Path.GetDirectoryName(AbsolutePath);
-                var directoryInfo = new DirectoryInfo(directory);
-                var files = directoryInfo.GetFiles();
-                for (var i = 1; i < files.Length; i++)
+                if (_previousBlog == null)
                 {
-                    if (AbsolutePath == files[i].FullName)
-                        return new Blog(files[i - 1].FullName);                    
+                    var directory = Path.GetDirectoryName(AbsolutePath);
+                    var directoryInfo = new DirectoryInfo(directory);
+                    var files = directoryInfo.GetFiles();
+                    for (var i = 1; i < files.Length; i++)
+                    {
+                        if (AbsolutePath == files[i].FullName)
+                            _previousBlog = new Blog(files[i - 1].FullName);
+                    }
                 }
-                return null;
+                return _previousBlog;
             }
         }
 
@@ -52,15 +61,18 @@ namespace Bleu.FileSystem
         {
             get
             {
-                var directory = Path.GetDirectoryName(AbsolutePath);
-                var directoryInfo = new DirectoryInfo(directory);
-                var files = directoryInfo.GetFiles();
-                for (var i = 0; i < files.Length - 1; i++)
+                if (_nextBlog == null)
                 {
-                    if (AbsolutePath == files[i].FullName)
-                        return new Blog(files[i + 1].FullName);
+                    var directory = Path.GetDirectoryName(AbsolutePath);
+                    var directoryInfo = new DirectoryInfo(directory);
+                    var files = directoryInfo.GetFiles();
+                    for (var i = 0; i < files.Length - 1; i++)
+                    {
+                        if (AbsolutePath == files[i].FullName)
+                            _nextBlog = new Blog(files[i + 1].FullName);
+                    }
                 }
-                return null;
+                return _nextBlog;
             }
         }
 
@@ -72,22 +84,26 @@ namespace Bleu.FileSystem
 
         public DateTime Date { get; private set; }
 
+        public bool PreviewTruncated { get; private set; }
+
         public string Content 
         {
             get
             {
-                if (!File.Exists(AbsolutePath))
-                    return string.Empty;
-
-                var lines = File.ReadAllLines(AbsolutePath);
-
-                var content = string.Empty;
-                for (var i = 3; i < lines.Length; i++)
+                if (_content == null)
                 {
-                    content += lines[i];
-                }
+                    if (!File.Exists(AbsolutePath))
+                        return string.Empty;
 
-                return content;
+                    var lines = File.ReadAllLines(AbsolutePath);
+
+                    var content = string.Empty;
+                    for (var i = 3; i < lines.Length; i++)
+                    {
+                        _content += lines[i];
+                    }
+                }
+                return _content;
             }
         }
 
@@ -95,19 +111,45 @@ namespace Bleu.FileSystem
         {
             get
             {
-                if (!File.Exists(AbsolutePath))
-                    return string.Empty;
-
-                var lines = File.ReadAllLines(AbsolutePath);
-
-                var content = string.Empty;
-
-                for(var i = 3; i < lines.Length; i++)
+                if (_previewContent == null)
                 {
-                    content += lines[i];                    
-                }
+                    if (!File.Exists(AbsolutePath))
+                        return string.Empty;
 
-                return content;
+                    var lines = File.ReadAllLines(AbsolutePath);
+
+                    var content = string.Empty;
+
+                    for (var i = 3; i < lines.Length; i++)
+                    {
+                        content += lines[i];
+
+                        if (Settings.BlogPreviewLength == 0)
+                            continue;
+                        
+
+                        if (content.Length > Settings.BlogPreviewLength)
+                        {
+                            PreviewTruncated = true;
+                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);
+                            return _previewContent;
+                        }
+                    }
+
+
+                    if (!(Settings.BlogPreviewLength == 0))
+                    {
+                        if (content.Length > Settings.BlogPreviewLength)
+                        {
+                            PreviewTruncated = true;
+                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);
+                            return _previewContent;
+                        }
+                    }
+                    else
+                        _previewContent = content;
+                }
+                return _previewContent;
             }
         }
     }
