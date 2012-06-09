@@ -1,0 +1,67 @@
+﻿@model Bleu.Mvc.Schema.IBlog
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section title{
+    @Model.Title
+}
+
+<div class="row-fluid">  
+    <div class="span10">
+        <span class="date-heading">
+            @Model.Date.ToLongDateString()
+        </span>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span10">
+        <span class="heading">
+            @Model.Title
+        </span>
+    </div>   
+</div>
+
+<div class="row-fluid margin-top-40">
+    <div class="span10">
+        <p class="justify">
+            @Model.Content
+        </p>
+    </div>    
+</div>
+
+<div class="row-fluid margin-top-40">
+    <div class="span10">      
+        @if (@Model.PreviousBlog != null)
+        {
+            <div class="pull-left">
+                @Html.ActionLink("<< " + @Model.PreviousBlog.Title, "Show", "Article",
+                     new
+                     {
+                         year = @Model.PreviousBlog.Date.Year,
+                         month = @Model.PreviousBlog.Date.Month,
+                         day = @Model.PreviousBlog.Date.Day,
+                         title = @Model.PreviousBlog.UniqueTitle
+                     }, new { @class = "prev-blog-link" })
+            </div> 
+        }
+        @if (@Model.NextBlog != null)
+        {
+            <div class="pull-right">
+                @Html.ActionLink(@Model.NextBlog.Title + " >>", "Show", "Article",
+                     new
+                     {
+                         year = @Model.NextBlog.Date.Year,
+                         month = @Model.NextBlog.Date.Month,
+                         day = @Model.NextBlog.Date.Day,
+                         title = @Model.NextBlog.UniqueTitle
+                     }, new { @class = "next-blog-link" })
+            </div> 
+        }
+    </div>
+</div>
+
+<script type="text/javascript" src="http://disqus.com/forums/vahnpaper/embed.js"> </script>
+      <noscript><a href="http://vahnpaper.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
