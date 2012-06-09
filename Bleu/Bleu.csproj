@@ -67,7 +67,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Article\2012-06-08-Hello-Bleu.txt" />
+    <Content Include="Article\2012-06-09-boring-saturday.txt" />
+    <Content Include="Article\2012-06-10-gloomy-sunday.txt" />
+    <Content Include="Article\2012-06-11-manic-monday.txt" />
+    <Content Include="Article\2012-06-12-lazy-tuesday.txt" />
+    <Content Include="Article\2012-06-13-lucky-wednesday.txt" />
+    <Content Include="Article\2012-06-14-skip-thursday.txt" />
+    <Content Include="Article\2012-06-15-friday-im-in-love.txt" />
     <Content Include="Assets\css\bootstrap-responsive.min.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\css\layout.css" />
