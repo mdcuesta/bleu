@@ -18,19 +18,21 @@ namespace Bleu.Mvc.Configuration
             set { this["articlespath"] = value; }
         }
 
-        [ConfigurationProperty("articleviewspath")]
-        public string ArticleViewsPath
-        {
-            get { return (string) this["articleviewspath"] ?? "~/Views/Article"; }
-            set { this["articleviewspath"] = value; }
-        }
+        #region Commented
+        //[ConfigurationProperty("articleviewspath")]
+        //public string ArticleViewsPath
+        //{
+        //    get { return (string) this["articleviewspath"] ?? "~/Views/Article"; }
+        //    set { this["articleviewspath"] = value; }
+        //}
 
-        [ConfigurationProperty("articlenotfoundview")]
-        public string ArticleNotFoundView
-        {
-            get { return (string)this["articlenotfoundview"] ?? "~/Views/Article/ArticleNotFound.cshtml"; }
-            set { this["articlenotfoundview"] = value; }
-        }
+        //[ConfigurationProperty("articlenotfoundview")]
+        //public string ArticleNotFoundView
+        //{
+        //    get { return (string)this["articlenotfoundview"] ?? "~/Views/Article/ArticleNotFound.cshtml"; }
+        //    set { this["articlenotfoundview"] = value; }
+        //}
+        #endregion
 
         [ConfigurationProperty("blogtitle")]
         public string BlogTitle
@@ -57,6 +59,19 @@ namespace Bleu.Mvc.Configuration
                 return val;
             }
             set { this["blogspagesize"] = value; }
+        }
+
+        [ConfigurationProperty("blogpreviewlength")]
+        public int BlogPreviewLength
+        {
+            get
+            {
+                int val = 2000;
+                var configValue = (this["blogpreviewlength"] ?? "2000").ToString();
+                int.TryParse(configValue, out val);
+                return val;
+            }
+            set { this["blogpreviewlength"] = value; }
         }
 
         internal static BleuConfiguration Default

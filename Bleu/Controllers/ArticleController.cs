@@ -7,7 +7,9 @@ namespace Bleu.Controllers
     {
         public ActionResult Show(int year, int month, int day, string title)
         {
-            return ArticleView(year, month, day, title);
+            //return ArticleView(year, month, day, title);
+            var blog = ContentManager.ContentSource.GetBlog(year, month, day, title);
+            return View("Article", blog);
         }
 
         public ActionResult ListByDay(int year, int month, int day)

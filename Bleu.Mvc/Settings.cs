@@ -19,8 +19,7 @@ namespace Bleu.Mvc
                         _configuration = new BleuConfiguration
                                              {
                                                 ArticlesPath = "~/Articles",
-                                                Author = "bleu blogger",
-                                                ArticleViewsPath = "~/Views/Article"
+                                                Author = "bleu blogger"
                                              };
                     }
 
@@ -40,24 +39,7 @@ namespace Bleu.Mvc
 
         public static int BlogsPageSize { get { return Configuration.BlogsPageSize; } }
 
-        public static string ArticleViewsPath { 
-            get 
-            { 
-                return string.IsNullOrEmpty(Configuration.ArticleViewsPath) 
-                        ? "~/Views/Article" 
-                        : Configuration.ArticleViewsPath; 
-            } 
-        }
-
-        public static string ArticleNotFoundView
-        {
-            get
-            {
-                return string.IsNullOrEmpty(Configuration.ArticleNotFoundView)
-                        ? "~/Views/Article/ArticleNotFound.cshtml"
-                        : Configuration.ArticleNotFoundView; 
-            }
-        }
+        public static int BlogPreviewLength { get { return Configuration.BlogPreviewLength; } }
 
     }
 }

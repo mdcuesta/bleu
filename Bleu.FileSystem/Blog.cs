@@ -30,13 +30,39 @@ namespace Bleu.FileSystem
       
             UniqueTitle = Path.GetFileNameWithoutExtension(AbsolutePath);
             UniqueTitle = UniqueTitle.Replace(string.Format("{0:d4}-{1:d2}-{2:d2}-", Date.Year, Date.Month, Date.Day), string.Empty);
-
-            var directory = Path.GetDirectoryName(AbsolutePath);
         }
 
-        public IBlog PreviousBlog { get; private set; }
+        public IBlog PreviousBlog
+        {
+            get
+            {
+                var directory = Path.GetDirectoryName(AbsolutePath);
+                var directoryInfo = new DirectoryInfo(directory);
+                var files = directoryInfo.GetFiles();
+                for (var i = 1; i < files.Length; i++)
+                {
+                    if (AbsolutePath == files[i].FullName)
+                        return new Blog(files[i - 1].FullName);                    
+                }
+                return null;
+            }
+        }
 
-        public IBlog NextBlog { get; private set; }
+        public IBlog NextBlog 
+        {
+            get
+            {
+                var directory = Path.GetDirectoryName(AbsolutePath);
+                var directoryInfo = new DirectoryInfo(directory);
+                var files = directoryInfo.GetFiles();
+                for (var i = 0; i < files.Length - 1; i++)
+                {
+                    if (AbsolutePath == files[i].FullName)
+                        return new Blog(files[i + 1].FullName);
+                }
+                return null;
+            }
+        }
 
         public string UniqueTitle { get; private set; }
 
@@ -78,7 +104,7 @@ namespace Bleu.FileSystem
 
                 for(var i = 3; i < lines.Length; i++)
                 {
-                    content += lines[i];
+                    content += lines[i];                    
                 }
 
                 return content;

@@ -61,9 +61,17 @@ p
     font-weight: bold;
     color: #A3906D;
 }
+.next-blog-link, .prev-blog-link
+{
+    font-family: SpringSteel;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: italic;
+}
 #footer
 {
-    height: 350px;
+    height: 100px;
     background: #180F01;
 }
 
