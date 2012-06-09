@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bleu.FileSystem", "Bleu.Fil
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003.Disqus", "003.Disqus", "{41D25B6B-C381-40C5-8C39-E74D110170DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bleu.Disqus", "Bleu.Disqus\Bleu.Disqus.csproj", "{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{5612A001-EFA8-4D50-8C17-08E01208A796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5612A001-EFA8-4D50-8C17-08E01208A796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5612A001-EFA8-4D50-8C17-08E01208A796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +44,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{465D5EC1-DA16-4874-A05C-2EC77BB29740} = {181254B1-F3D6-47A0-AE92-51E85A69F757}
 		{5612A001-EFA8-4D50-8C17-08E01208A796} = {DBC5078C-E728-4775-9DE6-A4F9D89CD87D}
+		{302C82CD-E154-4977-B7CE-F9BFA1B5D18B} = {41D25B6B-C381-40C5-8C39-E74D110170DF}
 	EndGlobalSection
 EndGlobal

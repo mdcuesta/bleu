@@ -114,6 +114,10 @@
     <Content Include="Views\Article\ArticleViewTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bleu.Disqus\Bleu.Disqus.csproj">
+      <Project>{302C82CD-E154-4977-B7CE-F9BFA1B5D18B}</Project>
+      <Name>Bleu.Disqus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bleu.FileSystem\Bleu.FileSystem.csproj">
       <Project>{5612A001-EFA8-4D50-8C17-08E01208A796}</Project>
       <Name>Bleu.FileSystem</Name>

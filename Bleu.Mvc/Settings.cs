@@ -22,9 +22,7 @@ namespace Bleu.Mvc
                                                 Author = "bleu blogger"
                                              };
                     }
-
-
-                }
+                }                
                 return _configuration;
             }
         }
