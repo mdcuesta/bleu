@@ -7,19 +7,17 @@
     @Html.Title() - @Html.Description()
 }
 
+<div class="row-fluid">  
+    <div class="span9">
 @foreach (var blog in @Model)
-{
-    
-    <div class="row-fluid">  
-        <div class="span12">
+{   
+
+        <div>
             <span class="date-heading">
                 @blog.Date.ToLongDateString()    
             </span>
         </div>
-    </div>
-
-    <div class="row-fluid">
-        <div class="span12">
+        <div>
             <span class="heading">
                 @Html.ActionLink(@blog.Title, "Show", "Article", 
                     new { year = @blog.Date.Year,
@@ -28,13 +26,10 @@
                         title = @blog.UniqueTitle }, null)
             </span>
         </div>   
-    </div>
-
-    <div class="row-fluid margin-top-40 margin-bottom-80">
-        <div class="span12">
+    
+        <div class="margin-bottom-40">
             <p class="justify">
-                @blog.PreviewContent                 
-               
+                @Html.Raw(@blog.PreviewContent)                
                 <span class="read-more">
                     @Html.ActionLink("...read more...", "Show", "Article", 
                         new { year = @blog.Date.Year,
@@ -44,11 +39,14 @@
                 </span>                
             </p>
         </div>    
-    </div>
 }
+    </div>
+    
+    @Html.Partial("_LatestPosts")    
+</div>
 
 <div class="row-fluid">
-    <div class="span12">      
+    <div class="span9">      
         <div class="pull-left">
             @if ((bool)@ViewData["shownewerposts"])
             { 
@@ -61,5 +59,12 @@
                 @Html.ActionLink("Older Posts >>", "Index", "Root", new { page = ((int)ViewData["page"]) + 1 }, new { @class = "btn btn-bleu btn-large" })
             }
         </div> 
+    </div>
+</div>
+
+<div class="row-fluid margin-top-40">
+    <div class="span12"> 
+        <div id="disqus_thread"></div>
+        @Html.DisqusComment()
     </div>
 </div>

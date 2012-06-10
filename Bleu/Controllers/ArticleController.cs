@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Bleu.Mvc;
+using System.Linq;
 
 namespace Bleu.Controllers
 {
@@ -7,24 +8,37 @@ namespace Bleu.Controllers
     {
         public ActionResult Show(int year, int month, int day, string title)
         {
-            //return ArticleView(year, month, day, title);
             var blog = ContentManager.ContentSource.GetBlog(year, month, day, title);
+            if (blog == null)
+                RedirectToAction("PageNotFound", "Root");
             return View("Article", blog);
         }
 
         public ActionResult ListByDay(int year, int month, int day)
         {
-            return View();
+            var blogs = ContentManager.ContentSource.GetBlogs(year, month, day);
+            if (blogs.Count() < 1)
+                RedirectToAction("PageNotFound", "Root");
+            ViewData.Add("title", string.Format("{0}/{1:d2}/{2:d2} - Archive", year, month, day));
+            return View("DayArticleArchive", blogs);
         }
 
         public ActionResult ListByMonth(int year, int month)
         {
-            return View();
+            var blogs = ContentManager.ContentSource.GetBlogs(year, month);
+            if (blogs.Count() < 1)
+                RedirectToAction("PageNotFound", "Root");
+            ViewData.Add("title", string.Format("{0}/{1:d2} - Archive", year, month));
+            return View("MonthArticleArchive", blogs);            
         }
 
         public ActionResult ListByYear(int year)
         {
-            return View();
+            var blogs = ContentManager.ContentSource.GetBlogs(year);
+            if (blogs.Count() < 1)
+                RedirectToAction("PageNotFound", "Root");
+            ViewData.Add("title", string.Format("{0} - Archive", year));
+            return View("YearArticleArchive", blogs);  
         }
     }
 }

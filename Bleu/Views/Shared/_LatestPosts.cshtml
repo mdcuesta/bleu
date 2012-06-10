@@ -1,0 +1,28 @@
+﻿<div class="span3 margin-top-40">
+    <span class="sidebar-heading">
+        Latest Posts
+    </span>
+    <div class="margin-top-20">
+        <ul class="sidebar-ul">
+        @foreach (var blog in Bleu.Mvc.ContentManager.ContentSource.GetPagedBlogs(1, 50))
+        { 
+            <li>
+                <span>
+                @Html.ActionLink(@blog.Title, "Show", "Article",
+                        new
+                        {
+                            year = @blog.Date.Year,
+                            month = @blog.Date.Month,
+                            day = @blog.Date.Day,
+                            title = @blog.UniqueTitle
+                        }, new { @class = "test" })
+
+                    </span>
+                    <span>
+                    - @blog.Date.ToShortDateString()
+                    </span>
+            </li>           
+        }
+        </ul>
+    </div>
+</div>

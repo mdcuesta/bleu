@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Bleu.Mvc.Schema.IBlog>
+           
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section title{
+    
+    @ViewData["title"].ToString()
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <ul class="archive-ul">
+        @foreach (var blog in @Model)
+        {
+            <li>
+                <span>
+                @Html.ActionLink(@blog.Title, "Show", "Article",
+                     new
+                     {
+                         year = @blog.Date.Year,
+                         month = @blog.Date.Month,
+                         day = @blog.Date.Day,
+                         title = @blog.UniqueTitle
+                     }, new { @class = "test" })
+
+                 </span>
+                 <span>
+                    - @blog.Date.ToLongDateString()
+                 </span>
+            </li>            
+        }
+        </ul>
+    </div>
+</div>

@@ -26,7 +26,7 @@
 <div class="row-fluid margin-top-40">
     <div class="span12">
         <p class="justify">
-            @Model.Content
+            @Html.Raw(@Model.Content)
         </p>
     </div>    
 </div>
@@ -36,7 +36,7 @@
         @if (@Model.PreviousBlog != null)
         {
             <div class="pull-right">
-                @Html.ActionLink("<< " + @Model.PreviousBlog.Title, "Show", "Article",
+                @Html.ActionLink(@Model.PreviousBlog.Title + " >>", "Show", "Article",
                      new
                      {
                          year = @Model.PreviousBlog.Date.Year,
@@ -49,7 +49,7 @@
         @if (@Model.NextBlog != null)
         {
             <div class="pull-left">
-                @Html.ActionLink(@Model.NextBlog.Title + " >>", "Show", "Article",
+                @Html.ActionLink("<< " + @Model.NextBlog.Title, "Show", "Article",
                      new
                      {
                          year = @Model.NextBlog.Date.Year,

@@ -84,7 +84,7 @@ namespace Bleu
 
             routes.MapRoute(
                 "ListArticleByYear",
-                "{year}",
+                "{year}/archive",
                 new { controller = "Article", action = "ListByYear" },
                 new { year = @"\d{2}|\d{4}" }
                 );

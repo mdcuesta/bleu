@@ -1,0 +1,54 @@
+﻿title: Another way To Blog
+author: Michael Dela Cuesta
+date: 2012/06/10
+
+<div class="margin-top-50">
+	<span class="heading">
+		Bleu
+	</span>
+	<div class="margin-top-20">
+		<p class="justify">
+			is a <span class="highlight">git</span>-powered, minimalist blog engine intended to run in <span class="highlight">AppHarbor</span>.
+		</p>
+		<p class="justify">
+			The concept is based on the <span class="highlight">toto</span> blog engine which is written in <span class="highlight">ruby</span> and intended to run in <span class="highlight">heroku</span>.
+			You could find and download <span class="highlight">toto</span> at <span class="highlight"><a href="http://cloudhead.io/toto" target="_blank">http://cloudhead.io/toto</a></span>.
+		</p>
+	</div>
+</div>
+
+<div class="margin-top-40">
+	<span class="heading">
+		Source
+	</span>
+	<p class="justify margin-top-20">
+		<span class="highlight"><a href="https://github.com/mdcuesta/bleu" target="_blank">https://github.com/mdcuesta/bleu</a></span>
+    </p>
+</div>
+
+<div class="margin-top-40">
+	<span class="heading">
+		Blog in 10 seconds
+	</span>      
+	<div class="margin-top-20">
+		<ul class="instruction">
+			<li>git clone git@github.com:mdcuesta/bleu.git myblog</li>
+			<li>cd myblog</li>
+			<li>appharbor create myblog</li>
+			<li>git push appharbor master</li>                
+		</ul>
+	</div>        
+</div>
+
+<div class="margin-top-40">
+	<span class="heading">
+        How it Works
+    </span>
+    <div class="justify margin-top-20">
+        <ul class="instruction">  
+            <li>content is managed through <span class="highlight">git</span></li> 
+            <li>articles are stored as .txt files</li>    
+            <li>comments are handled by <span class="highlight">disqus</span></li>
+        </ul>
+    </div>
+</div>

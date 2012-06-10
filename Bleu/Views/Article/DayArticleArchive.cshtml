@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Bleu.Mvc.Schema.IBlog>
+           
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section title{
+    
+    @ViewData["title"].ToString()
+}
+
+@foreach (var blog in @Model)
+{
+    
+    <div class="row-fluid">  
+        <div class="span12">
+            <span class="date-heading">
+                @blog.Date.ToLongDateString()    
+            </span>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <span class="heading">
+                @Html.ActionLink(@blog.Title, "Show", "Article", 
+                    new { year = @blog.Date.Year,
+                        month = @blog.Date.Month,
+                        day = @blog.Date.Day,
+                        title = @blog.UniqueTitle }, null)
+            </span>
+        </div>   
+    </div>
+
+    <div class="row-fluid margin-top-40 margin-bottom-80">
+        <div class="span12">
+            <p class="justify">
+                @Html.Raw(@blog.Content)
+               
+                <span class="read-more">
+                    @Html.ActionLink("...read more...", "Show", "Article", 
+                        new { year = @blog.Date.Year,
+                            month = @blog.Date.Month,
+                            day = @blog.Date.Day,
+                            title = @blog.UniqueTitle }, null)  
+                </span>                
+            </p>
+        </div>    
+    </div>
+}

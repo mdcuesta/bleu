@@ -88,7 +88,46 @@ p
 {
     font-size: 30px;
 }
+.archive-ul
+{
 
+}
+.archive-ul li
+{
+    font-family: SpringSteel;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 30px;
+}
+.sidebar-ul
+{
+    list-style: none;
+    margin-left: 15px;
+}
+.sidebar-ul li
+{
+    font-family: SpringSteel;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 25px;
+}
+.sidebar-heading
+{
+    font-family: SpringSteel;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 30px;
+    color: #956C1F;
+}
+.footer-tag
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #0088CC;
+}
 .highlight, p .highlight
 {
     font-size: 25px;

@@ -4,6 +4,7 @@ using Bleu.Mvc;
 using System.Web;
 using System.Linq;
 using System.IO;
+using System.Web.Mvc;
 
 namespace Bleu.FileSystem
 {
@@ -96,12 +97,11 @@ namespace Bleu.FileSystem
                         return string.Empty;
 
                     var lines = File.ReadAllLines(AbsolutePath);
-
-                    var content = string.Empty;
+                    
                     for (var i = 3; i < lines.Length; i++)
                     {
                         _content += lines[i];
-                    }
+                    }                    
                 }
                 return _content;
             }
@@ -131,7 +131,7 @@ namespace Bleu.FileSystem
                         if (content.Length > Settings.BlogPreviewLength)
                         {
                             PreviewTruncated = true;
-                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);
+                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);                           
                             return _previewContent;
                         }
                     }
@@ -142,12 +142,14 @@ namespace Bleu.FileSystem
                         if (content.Length > Settings.BlogPreviewLength)
                         {
                             PreviewTruncated = true;
-                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);
+                            _previewContent = content.Substring(0, Settings.BlogPreviewLength - 1);                                                       
                             return _previewContent;
                         }
                     }
                     else
-                        _previewContent = content;
+                    {                        
+                        _previewContent = content;                       
+                    }
                 }
                 return _previewContent;
             }

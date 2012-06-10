@@ -69,7 +69,7 @@ namespace Bleu.FileSystem
 
             var info = new DirectoryInfo(absolutePath);
 
-            var files = info.GetFiles().Where(x => x.Name.StartsWith(year.ToString()));
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(year.ToString())).OrderByDescending(x => x.FullName);
 
             foreach (var file in files)
             {
@@ -85,7 +85,7 @@ namespace Bleu.FileSystem
 
             var info = new DirectoryInfo(absolutePath);
 
-            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}", year, month)));
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}", year, month))).OrderByDescending(x => x.FullName);
 
             foreach (var file in files)
             {
@@ -101,7 +101,7 @@ namespace Bleu.FileSystem
 
             var info = new DirectoryInfo(absolutePath);
 
-            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}-{2:d2}", year, month, day)));
+            var files = info.GetFiles().Where(x => x.Name.StartsWith(string.Format("{0}-{1:d2}-{2:d2}", year, month, day))).OrderByDescending(x => x.FullName);
 
             foreach (var file in files)
             {
