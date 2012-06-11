@@ -31,7 +31,7 @@
             <p class="justify">
                 @Html.Raw(@blog.PreviewContent)                
                 <span class="read-more">
-                    @Html.ActionLink("...read more...", "Show", "Article", 
+                    @Html.ActionLink("...permalink...", "Show", "Article", 
                         new { year = @blog.Date.Year,
                             month = @blog.Date.Month,
                             day = @blog.Date.Day,
