@@ -78,7 +78,15 @@ p
     height: 100px;
     background: #180F01;
 }
-
+#menu-container 
+{
+    background: #180F01;
+}
+#header-container 
+{
+    border-bottom: 1px solid #180F01;
+    border-bottom-style: dashed;
+}
 .nav-pills > li > a
 {
     font-weight: bold;
@@ -87,6 +95,24 @@ p
 .menu
 {
     font-size: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li
+{
+    float: left;
+    margin: 0 20px 0 20px;
+}
+.menu li a 
+{
+    text-decoration: none;
+    font-weight: bold;    
+    color: #A3906D;   
+}
+.menu li a:hover 
+{
+    color: #956C1F; 
 }
 .archive-ul
 {
@@ -126,7 +152,7 @@ p
 {
     font-size: 25px;
     font-weight: bold;
-    color: #0088CC;
+    color: #A3906D; ;
 }
 .highlight, p .highlight
 {
